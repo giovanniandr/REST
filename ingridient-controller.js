@@ -2,7 +2,7 @@ var Ingridient = require('./models/ingridient')
 
 exports.createIngridient = function(req, res) { 
     var newingridient = new Ingridient(req.body);
-    newuser.save(function (err, ingridient) { 
+    newingridient.save(function (err, ingridient) { 
         if (err) { 
             res.status (400).json(err);
         }

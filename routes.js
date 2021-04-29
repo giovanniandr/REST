@@ -9,11 +9,11 @@ ingridientCtrl = require('./ingridient-controller');
 // router.get('/hello/:foo/:bar', itemCtrl.getWorldParams);
 // router.post('/hello', itemCtrl.postWorld);
 
-router.post('/users', ingridientCtrl.createIngridient);
-router.get('/users', ingridientCtrl.getIngridients);
-router.get('/users/:id', ingridientCtrl.getIngridient);
-router.put('/users/:id', ingridientCtrl.updateIngridient);
-router.delete('/users/:id', ingridientCtrl.deleteIngridient);
+router.post('/ingridients', ingridientCtrl.createIngridient);
+router.get('/ingridients', ingridientCtrl.getIngridients);
+router.get('/ingridients/:id', ingridientCtrl.getIngridient);
+router.put('/ingridients/:id', ingridientCtrl.updateIngridient);
+router.delete('/ingridients/:id', ingridientCtrl.deleteIngridient);
 
 module.exports.UPLOAD_PATH = "uploads";
 
