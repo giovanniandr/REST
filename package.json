@@ -12,7 +12,7 @@
     "url": "git+https://github.com/giovanniandr/CA2Web.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Giovanni Andrade - 2018320",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/giovanniandr/CA2Web/issues"
@@ -22,9 +22,13 @@
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "del": "^6.0.0",
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "mongoose": "^5.12.6",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.7"
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
   }
 }
