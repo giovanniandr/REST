@@ -6,6 +6,7 @@ var itemCtrl = require('./item-controller');
 userCtrl = require('./user-controller');
 imageCtrl = require('./image-controller');
 
+
 router.get('/hello', itemCtrl.getWorld);
 router.get('/hello/:foo/:bar', itemCtrl.getWorldParams);
 router.post('/hello', itemCtrl.postWorld);
@@ -21,6 +22,12 @@ router.get('/users/:id', userCtrl.deleteUser);
 module.exports.UPLOAD_PATH = "uploads";
 var multer = require("multer");
 var upload = multer({dest: module.exports.UPLOAD_PATH});
+
+//Full CRUD for images
+router.post('/images', upload.single('image'), imageCtrl.uploadImage);
+router.get('/images', imageCtrl.getImages);
+router.get('/images/:id', imageCtrl.getImage);
+router.delete('/images/:id', imageCtrl.deleteImage);
 
 //Router js path
 module.exports = router;
