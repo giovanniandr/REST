@@ -1,7 +1,7 @@
-var Ingridient = require('./models/ingridients')
+var Ingridient = require('./models/ingridient')
 
 exports.createIngridient = function(req, res) { 
-    var newuser = new User(req.body);
+    var newingridient = new Ingridient(req.body);
     newuser.save(function (err, ingridient) { 
         if (err) { 
             res.status (400).json(err);
@@ -12,7 +12,7 @@ exports.createIngridient = function(req, res) {
 };
 
 exports.getIngridients = function(req, res) {
-  User.find({}, function (err, ingridients) {
+  Ingridient.find({}, function (err, ingridients) {
     if (err) {
       res.status(400).json(err); 
     } 
@@ -21,28 +21,28 @@ exports.getIngridients = function(req, res) {
 };
 
 exports.getIngridient = function(req, res) {
-  User.findOne({_id: req.params.id}, function (err, ingridient) {
+  Ingridient.findOne({_id: req.params.id}, function (err, ingridients) {
     if (err) {
       res.status(400).json(err); 
     } 
-    res.json(ingridient);
+    res.json(ingridients);
   }); 
 };
 
-exports.updateIngridiet = function(req, res) {
-  User.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, function (err, ingridient) {
+exports.updateIngridient = function(req, res) {
+  Ingridient.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, function (err, ingridients) {
     if (err) {
       res.status(400).json(err); 
     } 
-    res.json(ingridient);
+    res.json(ingridients);
   }); 
 };
 
 exports.deleteIngridient = function(req, res) {
-  User.findByIdAndRemove({_id: req.params.id}, function (err, ingridient) {
+  Ingridient.findByIdAndRemove({_id: req.params.id}, function (err, ingridients) {
     if (err) {
       res.status(400).json(err); 
     } 
-    res.json(ingridient);
+    res.json(ingridients);
   }); 
 };

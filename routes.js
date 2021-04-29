@@ -3,17 +3,17 @@ router = express.Router();
 
 var
 // itemCtrl = require('./item-controller'),
-userCtrl = require('./user-controller');
+ingridientCtrl = require('./ingridient-controller');
 
 // router.get('/hello', itemCtrl.getWorld);
 // router.get('/hello/:foo/:bar', itemCtrl.getWorldParams);
 // router.post('/hello', itemCtrl.postWorld);
 
-router.post('/users', userCtrl.createUser);
-router.get('/users', userCtrl.getUsers);
-router.get('/users/:id', userCtrl.getUser);
-router.put('/users/:id', userCtrl.updateUser);
-router.delete('/users/:id', userCtrl.deleteUser);
+router.post('/users', ingridientCtrl.createIngridient);
+router.get('/users', ingridientCtrl.getIngridients);
+router.get('/users/:id', ingridientCtrl.getIngridient);
+router.put('/users/:id', ingridientCtrl.updateIngridient);
+router.delete('/users/:id', ingridientCtrl.deleteIngridient);
 
 module.exports.UPLOAD_PATH = "uploads";
 
