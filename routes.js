@@ -1,5 +1,6 @@
 const express = require('express'),
-router = express.Router();
+router = express.Router(),
+path = require('path');
 
 var
 // itemCtrl = require('./item-controller'),
@@ -16,6 +17,21 @@ router.put('/ingridients/:id', ingridientCtrl.updateIngridient);
 router.delete('/ingridients/:id', ingridientCtrl.deleteIngridient);
 
 module.exports.UPLOAD_PATH = "uploads";
+
+//Router request index.html
+router.get('/', function(req,res){
+    res.sendFile(path.join(__dirname, 'index.html'))
+})
+
+//Router request style.css
+router.get('/style.css', function(req,res){
+    res.sendFile(path.join(__dirname, 'style.css'))
+})
+
+//Router request script.js
+router.get('/script.js', function(req,res){
+    res.sendFile(path.join(__dirname, 'script.js'))
+})
 
 var multer = require("multer");
 var upload = multer({ dest: module.exports.UPLOAD_PATH});
