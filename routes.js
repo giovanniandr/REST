@@ -1,13 +1,13 @@
 const express = require('express'),
 router = express.Router();
+const path = require('path');
 
-var
-// itemCtrl = require('./item-controller'),
-userCtrl = require('./user-controller');
+var userCtrl = require('./user-controller');
 
-// router.get('/hello', itemCtrl.getWorld);
-// router.get('/hello/:foo/:bar', itemCtrl.getWorldParams);
-// router.post('/hello', itemCtrl.postWorld);
+//Router request index.html
+router.get('/', function(req,res){
+    res.sendFile(path.join(__dirname, '/views/index.html'))
+})
 
 router.post('/users', userCtrl.createUser);
 router.get('/users', userCtrl.getUsers);
