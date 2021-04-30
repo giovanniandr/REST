@@ -1,5 +1,13 @@
 /* Importing font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+:root{
+    --dark: rgb(92, 92, 92);
+    --light: rgb(192, 192, 192);
+    --border: rgb(206, 206, 206);
+    --border-btn: rgb(92, 92, 92);
+}
+
 *{
    padding: 0;
    margin: 0;
@@ -36,7 +44,6 @@ ul.tabs li {
 	cursor: pointer;
 	padding: 0px 21px;
 	height: 31px;
-	line-height: 31px;
 	border-top: 1px solid #333;
 	border-left: 1px solid #333;
 	border-bottom: 1px solid #333;
@@ -102,13 +109,6 @@ ul.tabs li.active {
 	}
 }
 
-:root{
-    --dark: rgb(92, 92, 92);
-    --light: rgb(192, 192, 192);
-    --border: rgb(206, 206, 206);
-    --border-btn: rgb(92, 92, 92);
-}
-
 a {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
@@ -147,10 +147,6 @@ a {
     
 }
 
-.border-shadow {
-    border: 1px solid var(--border-btn);
-    box-shadow: 1px 3px 10px #e9ecef;
-}
 
 .text-dark{
     color: var(--dark);
@@ -164,11 +160,34 @@ a {
     display: inline-block;
 }
 
-.text-gradient{
-    background: linear-gradient(to right, #8e2de2, #5c159b);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.button-create, .button-update, .button-delete{
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    height: 100%;
+    font-size: 110%;
+    border: none;
+}
+
+.button-create{
+    background: rgb(28, 184, 65);
+    width: 100%;
+    
+}
+
+.button-update{
+    background: rgb(66, 184, 221);
+    
+}
+
+.button-delete{
+    background: rgb(202, 60, 60);
 }
 
 #site-main{
@@ -178,7 +197,7 @@ a {
 
 #site-main .container.box-nav > a{
     font-size: 1em;
-    padding: 5em 1em;
+    padding: .5em 1em;
 }
 
 #size-main .container form{
@@ -190,10 +209,30 @@ table{
     width: 100%;
 }
 
-.tablet td, .table th{
-    padding: 75em;
+.table td, .table th{
+    padding: .75em;
     vertical-align: top;
     text-align: center;
     border-top: 1px solid var(--border);
+}
+
+.table td > a.btn{
+    padding: 3em 1em;
+    font-size: 1.1em;
+    margin: 0.2em;
+}
+
+.table tr:hover{
+    background-color: #06d6a0;
+}
+
+.table tr:hover > a{
+    box-shadow: none;
+}
+
+.table .thead-dark th{
+    color: white;
+    background-color: var(--dark);
+    border-color: #32383e;
 }
 
