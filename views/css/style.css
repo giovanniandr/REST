@@ -25,7 +25,24 @@
     width: 50%;
     height: 800px;
     float: left;
-    background-color: blue;
+}
+
+.welcome{
+    float: left;
+    position: absolute;
+}
+
+.boxfit{
+    width: 100%;
+	height: 100%;
+	float: left;
+	background: cover;
+	object-fit: cover;
+	position: relative;
+}
+
+.tabs {
+    width: 100%;
 }
 
 ul.tabs {
@@ -33,43 +50,42 @@ ul.tabs {
 	padding: 0;
 	float: left;
 	list-style: none;
-	height: 32px;
-	border-bottom: 1px solid #333;
 	width: 100%;
 }
 
+/* Button size for the tabs */
 ul.tabs li {
 	float: left;
 	margin: 0;
 	cursor: pointer;
-	padding: 0px 21px;
-	height: 31px;
-	border-top: 1px solid #333;
-	border-left: 1px solid #333;
-	border-bottom: 1px solid #333;
-	background-color: #666;
+    padding: 0px 21px;
+    width: 25%;
+	height: 35px;
+	background-color: #A9DEF9;
 	color: #ccc;
 	overflow: hidden;
 	position: relative;
 }
 
-.tab_last { border-right: 1px solid #333; }
+.text-center-tab{
+    float: left;
+    margin-top: 2%;
+    margin-left: 30%;
+    text-align: center;
+}
+
 
 ul.tabs li:hover {
-	background-color: #ccc;
-	color: #333;
+	background-color: rgb(201, 236, 253);
+	color: rgb(201, 236, 253);
 }
 
 ul.tabs li.active {
-	background-color: #fff;
-	color: #333;
-	border-bottom: 1px solid #fff;
+	background-color: rgb(201, 236, 253);
 	display: block;
 }
 
 .tab_container {
-	border: 1px solid #333;
-	border-top: none;
 	clear: both;
 	float: left;
 	width: 100%;
@@ -79,7 +95,7 @@ ul.tabs li.active {
 
 .tab_content {
 	padding: 20px;
-	display: none;
+    display: none;
 }
 
 .tab_drawer_heading { display: none; }
@@ -136,10 +152,10 @@ a {
 .wrap-text-center{
     float: left;
     text-align: center;
-    background-color: #06d6a0;
+    background-color: #fff;
     width: 100%;
     height: 50px;
-    
+    position: relative;
 }
 
 .text-center{
@@ -176,18 +192,19 @@ a {
 }
 
 .button-create{
-    background: rgb(28, 184, 65);
+    background: #D0F4DE;
     width: 100%;
+    margin-bottom: 10%;
     
 }
 
 .button-update{
-    background: rgb(66, 184, 221);
+    background: #ffef9f;
     
 }
 
 .button-delete{
-    background: rgb(202, 60, 60);
+    background: #FF99C8;
 }
 
 #site-main{
@@ -202,6 +219,10 @@ a {
 
 #size-main .container form{
     margin: 2em 0;
+}
+
+.border-shadow{
+    margin-bottom: 1%;
 }
 
 table{
@@ -223,7 +244,7 @@ table{
 }
 
 .table tr:hover{
-    background-color: #06d6a0;
+    background-color: #D0F4DE;
 }
 
 .table tr:hover > a{
@@ -232,7 +253,31 @@ table{
 
 .table .thead-dark th{
     color: white;
-    background-color: var(--dark);
-    border-color: #32383e;
+    background-color: #363636;
+    
+}
+
+/* Responsive screen */
+@media only screen and(max-width: 1024px){
+    table,thead,tbody,th,td,tr{
+        display: block;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr{
+        border: 1px solid var(--border);
+    }
+
+    td{
+        border: none;
+        border-bottom: 1px solid var(--border);
+        position: relative;
+    }
+
 }
 

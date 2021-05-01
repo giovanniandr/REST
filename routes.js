@@ -21,17 +21,23 @@ module.exports.UPLOAD_PATH = "uploads";
 //Router request index.html
 router.get('/', function(req,res){
     res.sendFile(path.join(__dirname, 'index.html'))
-})
+});
+
+//Router request create.html
+ router.use('/views', express.static(__dirname + '/views'));
 
 //Router request style.css
 router.get('/style.css', function(req,res){
     res.sendFile(path.join(__dirname, 'style.css'))
-})
+});
 
 //Router request script.js
 router.get('/script.js', function(req,res){
     res.sendFile(path.join(__dirname, 'script.js'))
-})
+});
+
+//Router request images
+ router.use('/img', express.static(__dirname +'/img'));
 
 var multer = require("multer");
 var upload = multer({ dest: module.exports.UPLOAD_PATH});

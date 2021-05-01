@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/crud.css">
+  <title> Place your kitchen order </title>
+</head>
+<body>
+ 
+<!-- Menu area-->
+<header id="header">
+        <nav>
+        <!-- Welcome page -->
+        <div class="container">
+            <div class="text-center">
+                <a class="nav-brand text-dark"> New ingridient system </a>
+            </div>
+        </div>
+       </nav>
+</header>
+
+
+    <!-- Table with CRUD Starts -->
+        <main id="site-main"> 
+            <div class="container>"> 
+                <div class="box-nav d-flex justify-between">
+                    <div class="filter">
+                        <a href="/" class="border-shadow"> 
+                        <button class="button-create" href="/"> Return to main menu </button>  
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <form action="/" method="POST" id="create-item">
+                    <div class="new_item">
+                        
+                        <!-- Form for item name -->
+                        <div class="form-group">
+                            <label for="item" class="text-light"> Item name </label>
+                            <input type="hidden" name="id" value="">
+                            <input type="text" name="item" value="" placeholder="Item name">
+                        </div>
+
+                         <!-- Form for Category -->
+                        <div class="form-group">
+                            <label for="category" class="text-light"> Category </label>
+                            <input type="text" name="category" value="" placeholder="Category">
+                        </div>
+
+                        <!-- Form for Allergy -->
+                        <div class="form-group">
+                            <label for="allergy" class="text-light"> Allergy </label>
+                            <input type="text" name="allergy" value="" placeholder="Allergy">
+                        </div>
+
+                        <!-- Save button -->
+                        <div class="form-group">
+                            <button type="submit" class="btn text-dark" update> Create </button>
+                        </div>
+
+                    </div>
+                </form>
+        </main>
+  </div>
+
+</body>
+</html>

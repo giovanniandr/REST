@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/views/css/style.css"> 
   <title> Place your kitchen order </title>
 </head>
 <body>
@@ -11,7 +11,10 @@
 <header>
     <!-- Welcome page -->
     <div id="ordernow"> </div>
-    <div id="picture"> <h1 class="welcome"> It was never so easy to order ingridients for your kitchen.</h1> </div>
+    <div id="picture"> 
+         <img src="img/ingridients.jpg" class="boxfit">
+        <div class="welcome"> It was never so easy to order ingridients for your kitchen.</div> 
+    </div>
     <nav>
         <div class="wrap-text-center">
             <div class="text-center">
@@ -23,10 +26,10 @@
 
 <!-- Page tabs for selecting between categories -->
 <ul class="tabs">
-  <li class="active" rel="tab1">Fresh Products</li>
-  <li rel="tab2">Dairy Products</li>
-  <li rel="tab3">Canned Products</li>
-  <li rel="tab4">Bakery Products</li>
+  <li class="active" rel="tab1"> <a href="/" class="text-center-tab"> Fresh Products </a> </li>
+  <li rel="tab2"> <a href="/" class="text-center-tab"> Dairy Products </a> </li>
+  <li rel="tab3"> <a href="/" class="text-center-tab"> Canned Products </a> </li>
+  <li rel="tab4"> <a href="/" class="text-center-tab"> Bakery Products </a> </li>
 </ul>
 
 <!-- Tab_container opens -->
@@ -37,17 +40,17 @@
   <div id="tab1" class="tab_content">
 
     <!-- Table with CRUD Starts -->
- <h2> Fresh section </h2>
+ <h2> <a class="nav-brand text-dark"> Fresh section </a> </h2>
         <main id="site-main"> 
             <div class="container>"> 
                 <div class="box-nav d-flex justify-between">
-                    <a href="/add-ingridient" class="border-shadow"> 
+                    <a href="/views/create.html" class="border-shadow"> 
                         <button class="button-create"> New ingridient </button>  
                     </a>
                 </div>
 
                 <!-- Table -->
-                <form action="/" method="POST">
+                <form action="/" method="GET">
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
