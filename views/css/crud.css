@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 :root{
-    --dark: #2b2d42;
-    --light: #adb5bd;
-    --border: #dee2e6;
-    --border-btn: #edf2f4;
+    --dark: rgb(36,36,36);
+    --light: rgb(192, 192, 192);
+    --border: rgb(206, 206, 206);
+    --border-btn: rgb(92, 92, 92);
 }
 
 * {
@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 
-a {
+a, label {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
@@ -22,6 +22,12 @@ a {
 .container{
     max-width: 1024px;
     margin: auto;
+}
+
+.wrap-container{
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 5%;
 }
 
 .nav-brand{
@@ -59,12 +65,6 @@ a {
     color: var(--light);
 }
 
-.text-gradient{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 #header nav{
     background-color: #A9DEF9;
@@ -72,6 +72,7 @@ a {
     width: 100%;
 }
 
+/* Responsive screen */
 @media only screen and (max-width: 1024px){
     table, thead, tbody, th, td, tr{
         display: block;
@@ -122,11 +123,21 @@ a {
     border-radius: .2em;
 }
 
+select{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
 #update_user .form-group .btn,
 #create-item .form-group .btn{
     width: 100%;
     padding: .9em 1em;
-    background-color:#16db93; 
+    background-color:#d0f4de; 
     border: none;
     font-family: 'PT Sans', sans-serif;
     font-size: 1em;
@@ -137,6 +148,6 @@ a {
 
 #update_user .form-group .btn:hover,
 #create-item .form-group .btn:hover{
-    background-color: var(--dark);
+    background-color: #ecfcf2;
     color: var(--border);
 }
