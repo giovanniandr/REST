@@ -7,34 +7,51 @@
 </head>
 <body>
  
-<!-- Menu area-->
-<header id="header">
+    <!-- Menu area-->
+    <header id="header">
         <nav>
-        <!-- Welcome page -->
-        <div class="container">
-            <div class="text-center">
-                <a class="nav-brand text-dark"> Stock System Orders & Management </a>
+            <!-- Welcome page -->
+            <div class="container">
+                <div class="text-center">
+                    <a class="nav-brand text-dark"> Stock System Orders & Management </a>
+                </div>
             </div>
-        </div>
-       </nav>
-</header>
+        </nav>
+    </header>  
 
-
-
-<!-- Page tabs for selecting between categories -->
-<ul class="tabs">
-  <li class="active" rel="tab1"> <a href="/" class="text-center-tab"> Fresh Products </a> </li>
-  <li rel="tab2"> <a href="/" class="text-center-tab"> Dairy Products </a> </li>
-  <li rel="tab3"> <a href="/" class="text-center-tab"> Canned Products </a> </li>
-  <li rel="tab4"> <a href="/" class="text-center-tab"> Bakery Products </a> </li>
-</ul>
+    <!-- Page tabs for selecting between categories -->
+    <ul class="tabs">
+        <li class="active" rel="tab1"> <a href="#tab1" class="text-center-tab"> Fresh Products </a> </li>
+        <li rel="tab2"> <a href="#tab2" class="text-center-tab"> Dairy Products </a> </li>
+        <li rel="tab3"> <a href="#tab3" class="text-center-tab"> Canned Products </a> </li>
+        <li rel="tab4"> <a href="#tab4" class="text-center-tab"> Bakery Products </a> </li>
+    </ul>
 
 <!-- Tab_container opens -->
 <div class="tab_container">
 
-  <!-- First page: Fresh Products -->
-  <h3 class="d_active tab_drawer_heading" rel="tab1">Tab 1</h3>
-  <div id="tab1" class="tab_content">
+    <!-- First page: Fresh Products -->
+    <h3 class="d_active tab_drawer_heading" rel="tab1"> </h3>
+    <div id="tab1" class="tab_content">
+
+    <!-- Page tabes orientation -->
+    <div class="section"> 
+
+        <!-- Text title of the page -->
+        <div id="section"> <a class="text-title"> List of fresh products. </a> </div>
+
+        <!-- Create new ingridient button -->
+        <form action="/views/create.html" method="GET" id="create-item">
+            <div class="new_item">
+                <!-- Create button -->
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark">  Create new ingridient </button>
+                </div>
+            </div>
+        </form>
+        <!-- Close new ingridient button -->
+
+    </div>
 
     <!-- Table with CRUD Starts -->
         <main id="site-main"> 
@@ -48,8 +65,8 @@
                                 <th> Name </th>
                                 <th> Category </th>
                                 <th> Allergy </th>
-                                <th> </th>
-                                <th> </th>
+                                <th> Update </th>
+                                <th> Delete </th>
                             </tr>
                         </thead>
                         <!-- Row and data -->
@@ -58,12 +75,31 @@
                                 <td> Potato </td>
                                 <td> Vegetables </td>
                                 <td> None </td>
-                                <td> 
                                 <!-- Full CRUD Buttons --> 
-                                 <button class="button-update">Update</button>                              
-                                </td>
                                 <td>
-                                <button class="button-delete">Delete</button>
+                                    <!-- Create new update button -->
+                                    <form action="" method="GET" id="update-item">
+                                        <div class="new_item">
+                                            <!-- Update button -->
+                                            <div class="form-group">
+                                                <button type="submit" class="btn text-dark"> Update </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- Close new ingridient button -->
+                                </td>
+
+                                <td>
+                                    <!-- Create new delete button -->
+                                    <form action="" method="GET" id="delete-item">
+                                        <div class="new_item">
+                                            <!-- Delete button -->
+                                            <div class="form-group">
+                                                <button type="submit" class="btn text-dark">  Delete </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- Close new ingridient button -->
                                 </td>
                             </tr>
                         </tbody>
@@ -73,39 +109,9 @@
         </main>
   </div>
 
- <!-- Second page: Dairy Products -->
-  <h3 class="tab_drawer_heading" rel="tab2">Tab 2</h3>
-  <div id="tab2" class="tab_content">
-  <h2>Tab 2 content</h2>
-    <p>Nunc dui velit, scelerisque eu placerat volutpat, dapibus eu nisi. Vivamus eleifend vestibulum odio non vulputate.</p>
-  </div>
-
- <!-- Third page: Canned Products -->
-  <h3 class="tab_drawer_heading" rel="tab3">Tab 3</h3>
-  <div id="tab3" class="tab_content">
-  <h2>Tab 3 content</h2>
-    <p>Nulla eleifend felis vitae velit tristique imperdiet. Etiam nec imperdiet elit. Pellentesque sem lorem, scelerisque sed facilisis sed, vestibulum sit amet eros.</p>
-  </div>
-
- <!-- Fourth page: Bakery Products -->
-  <h3 class="tab_drawer_heading" rel="tab4">Tab 4</h3>
-  <div id="tab4" class="tab_content">
-  <h2>Tab 4 content</h2>
-    <p>Integer ultrices lacus sit amet lorem viverra consequat. Vivamus lacinia interdum sapien non faucibus. Maecenas bibendum, lectus at ultrices viverra, elit magna egestas magna, a adipiscing mauris justo nec eros.</p>
-  </div>
 
 <!-- Tab_container closes -->
 </div>
-
- <!-- Create new ingridnpmient -->
-<form action="/views/create.html" method="GET" id="create-item">
-    <div class="new_item">
-        <!-- Create button -->
-        <div class="form-group">
-            <button type="submit" class="btn text-dark">  Create new ingridient </button>
-        </div>
-    </div>
-</form>
 
 <!-- Script in the end to work jquery, got problems with script not working on top -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
