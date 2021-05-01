@@ -208,42 +208,35 @@ a {
     color: var(--border);
 }
 
-#update-item .form-group .btn{
-    margin-top: 1%;
-    margin-left: 1%;
-    width: 20%;
-    padding: .9em 1em;
-    background-color:#ffef9f; 
-    border: none;
-    font-family: 'PT Sans', sans-serif;
+#edit-item .form-group input[type="text"],
+#delete-item .form-group input[type="text"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
     font-size: 1em;
-    cursor: pointer;
     border-radius: .2em;
 }
 
-#update-item .form-group .btn:hover{
-    background-color: #fff4be;
-    color: var(--border);
-}
-
+#edit-item .form-group .btn,
 #delete-item .form-group .btn{
-    margin-top: 1%;
-    margin-left: 1%;
-    width: 20%;
+    width: 100%;
     padding: .9em 1em;
-    background-color:#FF99C8; 
+    background-color:#d0f4de; 
     border: none;
     font-family: 'PT Sans', sans-serif;
     font-size: 1em;
     cursor: pointer;
     border-radius: .2em;
+    margin: .5em 0;
 }
 
+#edit-item .form-group .btn:hover,
 #delete-item .form-group .btn:hover{
-    background-color: rgb(255, 179, 214);
+    background-color: #ecfcf2;
     color: var(--border);
 }
-
 
 
 .button:focus {
