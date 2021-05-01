@@ -1,3 +1,6 @@
+//Npm error lifecycle solution: https://www.geeksforgeeks.org/how-to-solve-npm-error-npm-err-code-elifecycle/
+
+
 const http = require('http'),
 // axios = require('axios'),
 logger = require('morgan'),
