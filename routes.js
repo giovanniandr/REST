@@ -4,7 +4,8 @@ path = require('path');
 
 var
 // itemCtrl = require('./item-controller'),
-ingridientCtrl = require('./ingridient-controller');
+ingridientCtrl = require('./ingridient-controller'),
+userCtrl = require('./user-controller');
 
 // router.get('/hello', itemCtrl.getWorld);
 // router.get('/hello/:foo/:bar', itemCtrl.getWorldParams);
@@ -16,6 +17,12 @@ router.get('/ingridients/:id', ingridientCtrl.getIngridient);
 router.put('/ingridients/:id', ingridientCtrl.updateIngridient);
 router.delete('/ingridients/:id', ingridientCtrl.deleteIngridient);
 
+router.post('/users', userCtrl.createUser);
+router.get('/users', userCtrl.getUsers);
+router.get('/users/:id', userCtrl.getUser);
+router.put('/users/:id', userCtrl.updateUser);
+router.delete('/users/:id', userCtrl.deleteUser);
+
 module.exports.UPLOAD_PATH = "uploads";
 
 //Router request index.html
@@ -25,6 +32,7 @@ router.get('/', function(req,res){
 
 //Router request create.html
  router.use('/views', express.static(__dirname + '/views'));
+
 
 //Router request style.css
 router.get('/style.css', function(req,res){

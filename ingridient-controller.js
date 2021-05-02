@@ -6,8 +6,7 @@ exports.createIngridient = function(req, res) {
         if (err) { 
             res.status (400).json(err);
         }
-
-        res.json(ingridient); 
+        res.json(ingridients); 
 });
 };
 
