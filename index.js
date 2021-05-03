@@ -10,6 +10,7 @@ express = require('express'),
 bodyParser = require('body-parser'),
 mongoose = require('mongoose'),
 dotenv = require("dotenv");
+path = require('path');
 
 //Variable for app to be used for express and port given.
 var app = express();

@@ -41,11 +41,11 @@
         <div id="section"> <a class="text-title"> List of fresh products. </a> </div>
 
         <!-- Create new ingridient button -->
-        <form action="/views/create.html" method="GET" id="create-item">
+        <form action="/views/create.html" id="rbutton">
             <div class="new_item">
                 <!-- Create button -->
                 <div class="form-group">
-                    <button type="submit" class="btn text-dark">  Create new ingridient </button>
+                    <button type="submit" class="btn text-dark" >  Create new ingridient </button>
                 </div>
             </div>
         </form>
@@ -72,18 +72,14 @@
                         <!-- Row and data -->
                         <tbody>
                             <tr>
-                                <td> Potato </td>
+                                <td> 
+                                </td>
                                 <td> Vegetables </td>
                                 <td> None </td>
-   <td>
+                                <td>
                                     <!-- Create new delete button -->
-                                    <form action="" method="GET" id="delete-item">
-                                        <div class="new_item">
-                                            <!-- Delete button -->
-                                            <div class="form-group">
-                                                <button type="submit" class="btn text-dark">  Delete </button>
-                                            </div>
-                                        </div>
+                                    <form action="/ingridients" method="GET">
+
                                     </form>
                                     <!-- Close new ingridient button -->
                                 </td>
@@ -114,7 +110,7 @@
 
 <!-- Script in the end to work jquery, got problems with script not working on top -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
-<script src="script.js"> </script>
+
 
 </body>
 </html>

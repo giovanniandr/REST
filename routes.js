@@ -18,6 +18,11 @@ router.get('/', function(req,res){
     res.sendFile(path.join(__dirname, 'index.html'))
 });
 
+//Router request get all collections from mongodb 
+router.get('/', function(req,res){
+    res.sendFile(path.join(__dirname, 'index.html'))
+});
+
 //Router request create.html
  router.use('/views', express.static(__dirname + '/views'));
 

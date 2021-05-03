@@ -92,7 +92,7 @@ ul.tabs li:hover {
 a {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    color: var(--light);
+    color: var(--dark);
 }
 
 .text-title {
@@ -190,12 +190,14 @@ a {
 }
 
 
-#create-item .form-group .btn{
+#create-item .form-group .btn,
+#rbutton .form-group .btn{
     margin-top: 1%;
     margin-left: 1%;
     width: 20%;
     padding: .9em 1em;
     background-color:#d0f4de; 
+    color: var(--dark);
     border: none;
     font-family: 'PT Sans', sans-serif;
     font-size: 1em;
@@ -203,10 +205,13 @@ a {
     border-radius: .2em;
 }
 
-#create-item .form-group .btn:hover{
+#create-item .form-group .btn:hover,
+#rbutton .form-group .btn:hover{
     background-color: #ecfcf2;
     color: var(--border);
 }
+
+
 
 #edit-item .form-group input[type="text"],
 #delete-item .form-group input[type="text"]{
