@@ -23,35 +23,25 @@
         <main id="site-main"> 
             <div class="wrap-container"> 
                 <!-- Table for create -->
-                <form action="/ingridients" method="POST" id="create-item" enctype="multipart/form-data">
+                <form action="/ingridients" method="POST" id="create-item">
                     <div class="new_item">
                         
-                        <!-- Form for item name -->
-                        <div class="form-group">
-                            <label for="name" class="text-light"> Item name </label>
-                            <input type="text" name="name" placeholder="Item name">
-                        </div>
 
                          <!-- Form for Category -->
                         <div class="form-group">
-                        <label for="category" class="text-light"> Category </label>
-                        <input type="text" name="category" placeholder="Category">
-                        </div>
+                            <label class="text-light"> Name </label>
+                            <input name="name" type="text">
 
-                        <!-- Form for Allergy -->
-                        <div class="form-group">
-                            <label for="allergy" class="text-light"> Allergy </label>
-                            <input type="text" name="allergy" placeholder="Allergy">
-                        </div>
+                            <label class="text-light"> Category </label>
+                            <input name="category" type="text">
 
-                <!-- Create button -->
-                
-                    <div class="new_item">
-                        <!-- Return button -->
-                        <div class="form-group">
+                            <label class="text-light"> Allergy </label>
+                            <input name="allergy" type="text">
+
                             <button type="submit" class="btn text-dark"> Create </button>
                         </div>
                     </div>
+                </form>
 
                 <!-- Return to main menu -->
                     <div class="new_item">
@@ -60,13 +50,15 @@
                             <button type="submit" class="btn text-dark"> Return to main menu </button>
                         </div>
                     </div>
-                </form>
+
 
             <!-- Wrap container closes-->
             </div>
 
         <!-- Main section closes -->
         </main>
+<!-- Notification for the user that ingridient is created -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>       
 
 </body>
 </html>

@@ -1,13 +1,12 @@
+//Variable for mongoose to 
 var mongoose = require('mongoose');
 
-var ingridientsSchema = new mongoose.Schema({
+//Variables in a schema allowing to define key value 
+var ingridientSchema = new mongoose.Schema({
     name: String,
     category: String,
-    allergy: String
-},
+    allergy: String,
+});
 
-{ timestamps: true }
-);
-
-
-module.exports = mongoose.model('Ingridient', ingridientsSchema);
+//Exporting mongoose for usage
+module.exports = mongoose.model('Ingridient', ingridientSchema);

@@ -1,9 +1,9 @@
-// tabbed content
-    // http://www.entheosweb.com/tutorials/css/tabs.asp
+// JS For tabs to change
+// Reference to https://codepen.io/kazmeyer/pen/lzqhf and http://www.entheosweb.com/tutorials/css/tabs.asp
     $(".tab_content").hide();
     $(".tab_content:first").show();
 
-  /* if in tab mode */
+  /* Inside tab mode hide and fade option for smooth transactions */
     $("ul.tabs li").click(function() {
 		
       $(".tab_content").hide();
@@ -17,7 +17,7 @@
 	  $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
 	  
     });
-	/* if in drawer mode */
+	/* Drawer mode hide and fade are smooth too */
 	$(".tab_drawer_heading").click(function() {
       
       $(".tab_content").hide();
@@ -32,7 +32,10 @@
     });
 	
 	
-	/* Extra class "tab_last" 
-	   to add border to right side
-	   of last tab */
-	$('ul.tabs li').last().addClass("tab_last");
+	/* Extra tab */
+    $('ul.tabs li').last().addClass("tab_last");
+    
+/* JS For user notification */ 
+$("#create-item").submit(function(event){
+    alert("Ingridient created successfully!");
+})
