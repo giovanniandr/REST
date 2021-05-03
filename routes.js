@@ -14,14 +14,14 @@ router.delete('/ingridients/:id', ingridientCtrl.deleteIngridient);
 
 
 //Router request index.html
-router.get('/', function(req,res){
-    res.sendFile(path.join(__dirname, 'index.html'))
-});
+// router.get('/', function(req,res){
+//     res.sendFile(path.join(__dirname, 'index.html'))
+// });
 
-//Router request get all collections from mongodb 
-router.get('/', function(req,res){
-    res.sendFile(path.join(__dirname, 'index.html'))
-});
+//Router request for index.ejs using render instead of send otherwise will download the page
+router.get('/', function(req, res){
+    res.render('index')
+})
 
 //Router request create.html
  router.use('/views', express.static(__dirname + '/views'));

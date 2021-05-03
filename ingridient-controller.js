@@ -26,8 +26,16 @@ exports.getIngridients = function(req, res) {
   Ingridient.find({}, function (err, ingridients) {
     if (err) {
       res.status(400).json(err); 
-    } 
-    res.json(ingridients);
+    }
+    axios.get("https://8000-jade-jackal-l9g5m1qe.ws-eu03.gitpod.io/ingridients")
+    .then(function(response){
+        console.log(response)
+res.render('index', {ingridients: response.data});
+    })
+    .catch(err =>{
+        res.send(err);
+    })
+    
   }); 
 };
 

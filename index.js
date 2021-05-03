@@ -10,7 +10,9 @@ express = require('express'),
 bodyParser = require('body-parser'),
 mongoose = require('mongoose'),
 dotenv = require("dotenv");
-path = require('path');
+path = require('path'),
+ejs = require('ejs'),
+axios = require('axios');
 
 //Variable for app to be used for express and port given.
 var app = express();
@@ -24,6 +26,9 @@ app
     .use(logger('tiny'))
     .use(require('./routes'))
     .use(express.static('public'));
+
+//Set the view engine to open index.ejs
+app.set('view engine', 'ejs');
 
 //Display on command which port is listening too
 app.listen(port, function(err){
