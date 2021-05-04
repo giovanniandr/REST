@@ -3,20 +3,15 @@ const express = require('express'),
 router = express.Router(),
 
 //Requiring controller to communicate
-ingridientCtrl = require('./ingridient-controller');
-
-//CRUD Commands being called from ingridient-controller with destination of /ingridients
-router.post('/ingridients', ingridientCtrl.createIngridient);
-router.get('/ingridients', ingridientCtrl.getIngridients);
-router.get('/ingridients/:id', ingridientCtrl.getIngridient);
-router.put('/ingridients/:id', ingridientCtrl.updateIngridient);
-router.delete('/ingridients/:id', ingridientCtrl.deleteIngridient);
+ctrl = require('./controller');
 
 
-//Router request index.html
-// router.get('/', function(req,res){
-//     res.sendFile(path.join(__dirname, 'index.html'))
-// });
+//CRUD API
+router.post('/items', ctrl.create);
+router.get('/items', ctrl.find);
+router.put('/items/:id', ctrl.update);
+router.delete('/items/:id', ctrl.delete);
+
 
 //Router request for index.ejs using render instead of send otherwise will download the page
 router.get('/', function(req, res){

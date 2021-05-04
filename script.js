@@ -37,5 +37,5 @@
     
 /* JS For user notification */ 
 $("#create-item").submit(function(event){
-    alert("Ingridient created successfully!");
+    alert("Ingredient created successfully!");
 })

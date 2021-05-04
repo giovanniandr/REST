@@ -1,7 +1,7 @@
 {
-  "name": "iwa2-test",
+  "name": "CRUD_APP",
   "version": "0.0.1",
-  "description": "my test app for IWA",
+  "description": "Web application ca for Mikhail",
   "main": "index.js",
   "scripts": {
     "test": "nodemon index.js",
@@ -9,30 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikhail-cct/iwa2-test.git"
+    "url": "git+https://github.com/giovanniandr/CA2Web/tree/v2"
   },
-  "author": "Mikhail",
+  "author": "Giovanni Andrade",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mikhail-cct/iwa2-test/issues"
-  },
-  "homepage": "https://github.com/mikhail-cct/iwa2-test#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "axios": "^0.21.1",
+    "axios": "^0.21.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "css": "^3.0.0",
-    "del": "^6.0.0",
     "dotenv": "^8.2.0",
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "fs": "0.0.1-security",
-    "html": "^1.0.0",
-    "jquery": "^3.6.0",
-    "mongoose": "^5.12.2",
+    "mongoose": "^5.10.11",
     "morgan": "^1.10.0",
-    "multer": "^1.4.2",
-    "path": "^0.12.7"
+    "nodemon": "^2.0.6"
   }
 }
