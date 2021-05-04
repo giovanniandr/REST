@@ -21,7 +21,7 @@ exports.create = function(req, res) {
 //Create function to get items
 exports.find = function(req, res) {
 //Variable to find items
-    Item.find({}, function (err, items) {
+  Item.find({}, function (err, items) {
         if (err) {
         res.status(400).json(err); 
         } 

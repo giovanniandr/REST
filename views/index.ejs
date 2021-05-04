@@ -69,6 +69,13 @@
                         </thead>
                         <!-- Row and data -->
                         <tbody>
+                            <%addList.forEach(ingredients => {%>
+                                <tr>
+                                    <td><%= ingredients.name %></td>
+                                    <td><%= ingredients.category %></td>
+                                    <td><%= ingredients.allergy %></td>
+                                </tr>
+                            <%})%>
                         </tbody>
                     </table>
                 </form>

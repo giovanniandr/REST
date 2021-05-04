@@ -1,12 +1,11 @@
 //Variable for mongoose to 
 var mongoose = require('mongoose');
 
-//Variables in a schema allowing to define key value 
-var itemSchema = new mongoose.Schema({
+//Schema as models when imported does not load and gives error to load table content
+const itemsSchema = {
     name: String,
     category: String,
-    allergy: String,
-});
+    allergy: String
+}
 
-//Exporting mongoose for usage
-module.exports = mongoose.model('Item', itemSchema);
+const Item = mongoose.model('Item', itemsSchema);

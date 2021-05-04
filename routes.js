@@ -5,6 +5,7 @@ router = express.Router(),
 //Requiring controller to communicate
 ctrl = require('./controller');
 
+var Item = require('./models/item');
 
 //CRUD API
 router.post('/items', ctrl.create);
@@ -14,9 +15,14 @@ router.delete('/items/:id', ctrl.delete);
 
 
 //Router request for index.ejs using render instead of send otherwise will download the page
-router.get('/', function(req, res){
-    res.render('index')
+router.get('/', (req, res) => {
+    Item.find({}, function(err, items) {
+        res.render('index', {
+            addList: items
+        })
+    })
 })
+
 
 //Router request create.html
  router.use('/views', express.static(__dirname + '/views'));
