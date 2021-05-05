@@ -41,7 +41,7 @@
         <div id="section"> <a class="text-title"> List of fresh products. </a> </div>
 
         <!-- Create new button -->
-        <form action="/views/create.html" class="action-item">
+        <form action="/add-item" class="action-item">
                 <!-- Create button -->
                 <div class="form-group">
                     <button type="submit" class="btn text-dark" >  Create new ingredient </button>
@@ -73,7 +73,7 @@
                                     <td><%= ingredients.allergy %></td>
                                     <td>  
                                        <!-- Button to update item -->
-                                        <form action="/update-item?id=<%= ingredients._id %>" method="GET" >
+                                        <form action="/update-item?id=<%= items._id%>" method="GET" >
                                                 <!-- Return button -->
                                                 <div class="form-group" >
                                                     <button id="update-color" type="submit" class="btn text-dark"> Update </button>

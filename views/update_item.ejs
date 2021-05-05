@@ -23,17 +23,18 @@
         <main id="site-main"> 
             <div class="wrap-container"> 
                 <!-- Table for create -->
-                <form action="/items" method="POST" id="create-item">
+                <form method="POST" id="create-item">
                     <div class="new_item">
                         
 
                          <!-- Form for Category -->
                         <div class="form-group">
                             <label class="text-light"> Name </label>
-                            <input name="name" type="text">
+                            <input type="hidden" name="id" value="<%= item._id %>"> 
+                            <input name="name" value="<%= item.name %>" type="text">
 
                             <label class="text-light"> Category </label>
-                            <select name = "category" type="text"> 
+                            <select name = "category" value="<%= item.category %>" type="text" ></select>
                                 <option> Fresh </option>
                                 <option> Dairy </option>
                                 <option> Canned </option>
@@ -41,7 +42,7 @@
                             </select>
 
                             <label class="text-light"> Allergy </label>
-                            <select name = "allergy" type="text"> 
+                            <select name = "allergy" value="<%= item.allergy %>" type="text" ></select>
                                 <option> None </option>
                                 <option> Milk </option>
                                 <option> Eggs </option>

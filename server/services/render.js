@@ -2,7 +2,6 @@ const axios = require('axios');
 
 //Render index page
 exports.indexRoutes = function(req, res){
-    // Make a get request to /api/users
     axios.get('http://localhost:8000/items')
         .then(function(response){
             res.render('index', { items : response.data });
@@ -20,12 +19,12 @@ exports.add_item = function(req, res){
 }
 
 //Render update page
-exports.update_item = function(req, res){
-    axios.get('http://localhost:8000/items', {params: {id: req.query.id}})
-    .then(function(itemdata){
-        res.render("update_item", { item : itemdata.data})
-    })
-    .catch(err =>{
-        res.send(err);
-    })
+exports.update_item = (req, res) =>{
+    axios.get('http://localhost:8000/items', { params : { id : req.query.id }})
+        .then(function(data){
+            res.render("update_item", { item : data.data})
+        })
+        .catch(err =>{
+            res.send(err);
+        })
 }
