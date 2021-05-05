@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="/views/css/style.css"> 
+  <link rel="stylesheet" href="../views/css/style.css"> 
   <title> Ingredient System </title>
 </head>
 <body>
@@ -66,14 +66,14 @@
                         </thead>
                         <!-- Row and data -->
                         <tbody>
-                            <%addList.forEach(ingredients => {%>
+                            <%items.forEach(ingredients => {%>
                                 <tr>
                                     <td><%= ingredients.name %></td>
                                     <td><%= ingredients.category %></td>
                                     <td><%= ingredients.allergy %></td>
                                     <td>  
                                        <!-- Button to update item -->
-                                        <form action="/views/update.html?id=<%= ingredients._id %>" method="GET" >
+                                        <form action="/update-item?id=<%= ingredients._id %>" method="GET" >
                                                 <!-- Return button -->
                                                 <div class="form-group" >
                                                     <button id="update-color" type="submit" class="btn text-dark"> Update </button>
