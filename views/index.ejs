@@ -41,13 +41,11 @@
         <div id="section"> <a class="text-title"> List of fresh products. </a> </div>
 
         <!-- Create new button -->
-        <form action="/views/create.html" id="rbutton">
-            <div class="new_item">
+        <form action="/views/create.html" class="action-item">
                 <!-- Create button -->
                 <div class="form-group">
                     <button type="submit" class="btn text-dark" >  Create new ingredient </button>
                 </div>
-            </div>
         </form>
         <!-- Close new button -->
 
@@ -74,6 +72,24 @@
                                     <td><%= ingredients.name %></td>
                                     <td><%= ingredients.category %></td>
                                     <td><%= ingredients.allergy %></td>
+                                    <td>  
+                                       <!-- Button to update item -->
+                                        <form action="/" method="GET" >
+                                                <!-- Return button -->
+                                                <div class="form-group" >
+                                                    <button id="update-color" type="submit" class="btn text-dark"> Update </button>
+                                                </div>
+                                        </form>
+                                    </td>
+                                    <td>  
+                                    <!-- Button to delete item -->
+                                        <form action="/" method="POST" class="action-item" id="delete-color">
+                                                <!-- Return button -->
+                                                <div class="form-group" >
+                                                    <button type="submit" class="btn text-dark"> Delete </button>
+                                                </div>
+                                        </form>
+                                    </td>
                                 </tr>
                             <%})%>
                         </tbody>

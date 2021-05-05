@@ -23,7 +23,7 @@
         <main id="site-main"> 
             <div class="wrap-container"> 
                 <!-- Table for create -->
-                <form action="/ingridients" method="POST" id="create-item">
+                <form action="/items" method="POST" id="create-item">
                     <div class="new_item">
                         
 
@@ -33,10 +33,24 @@
                             <input name="name" type="text">
 
                             <label class="text-light"> Category </label>
-                            <input name="category" type="text">
+                            <select name = "category" type="text"> 
+                                <option> Fresh </option>
+                                <option> Dairy </option>
+                                <option> Canned </option>
+                                <option> Bakery </option>
+                            </select>
 
                             <label class="text-light"> Allergy </label>
-                            <input name="allergy" type="text">
+                            <select name = "allergy" type="text"> 
+                                <option> None </option>
+                                <option> Milk </option>
+                                <option> Eggs </option>
+                                <option> Peanuts </option>
+                                <option> Tree nuts </option>
+                                <option> Fish </option>
+                                <option> Vegetables </option>
+                                <option> Fruits </option>
+                            </select>
 
                             <button type="submit" class="btn text-dark"> Create </button>
                         </div>

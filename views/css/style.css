@@ -189,92 +189,6 @@ a {
     margin-left: 1%;
 }
 
-
-#create-item .form-group .btn,
-#rbutton .form-group .btn{
-    margin-top: 1%;
-    margin-left: 1%;
-    width: 20%;
-    padding: .9em 1em;
-    background-color:#d0f4de; 
-    color: var(--dark);
-    border: none;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: .2em;
-}
-
-#create-item .form-group .btn:hover,
-#rbutton .form-group .btn:hover{
-    background-color: #ecfcf2;
-    color: var(--border);
-}
-
-
-
-#edit-item .form-group input[type="text"],
-#delete-item .form-group input[type="text"]{
-    width: 100%;
-    padding: .6em 1em;
-    margin: .5em 0;
-    border: 1px solid var(--border);
-    font-family: 'Barlow', sans-serif;
-    font-size: 1em;
-    border-radius: .2em;
-}
-
-#edit-item .form-group .btn,
-#delete-item .form-group .btn{
-    width: 100%;
-    padding: .9em 1em;
-    background-color:#d0f4de; 
-    border: none;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: .2em;
-    margin: .5em 0;
-}
-
-#edit-item .form-group .btn:hover,
-#delete-item .form-group .btn:hover{
-    background-color: #ecfcf2;
-    color: var(--border);
-}
-
-
-.button:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-.button-create, .button-update, .button-delete{
-    color: white;
-    border-radius: 4px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    width: 30%;
-    height: 100%;
-    font-size: 110%;
-    border: none;
-}
-
-.button-create{
-    background: #D0F4DE;
-    width: 100%;
-    margin-bottom: 10%;
-    
-}
-
-.button-update{
-    background: #ffef9f;
-    
-}
-
-.button-delete{
-    background: #FF99C8;
-}
-
 #site-main{
     margin-top: 6em;
     font-family: 'Roboto', sans-serif;
@@ -306,12 +220,6 @@ table{
     border-top: 1px solid var(--border);
 }
 
-.table td > a.btn{
-    padding: 3em 1em;
-    font-size: 1.1em;
-    margin: 0.2em;
-}
-
 .table tr:hover{
     background-color: #f1f1f1;
 }
@@ -326,4 +234,51 @@ table{
     
 }
 
+/* Table buttons */
+.action-item .form-group .btn{
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 20%;
+    padding: .9em 1em;
+    background-color:#d0f4de; 
+    color: var(--dark);
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+}
+
+.action-item .form-group .btn:hover{
+    background-color: #ecfcf2;
+    color: var(--border);
+}
+
+#delete-color .btn{
+    background-color: #FF99C8;
+}
+
+#delete-color .btn:hover{
+    background-color: #ffbfdd;
+    color: var(--border);
+}
+
+#update-color{
+    background: #ffef9f;
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 20%;
+    padding: .9em 1em;
+    border: none;
+    border-radius: .2em;
+    padding: .9em 1em;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#update-color :hover{
+    background-color: #fdf1b6;
+    color: var(--border);
+}
 
