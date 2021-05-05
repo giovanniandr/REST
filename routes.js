@@ -1,11 +1,11 @@
 //Const to use express as router const
 const express = require('express'),
-router = express.Router(),
+router = express.Router()
 
-//Requiring controller to communicate
+//Requires import to be used in router
+Item = require('./models/item'),
+services = require('./services/render'),
 ctrl = require('./controller');
-
-var Item = require('./models/item');
 
 //CRUD API
 router.post('/items', ctrl.create);
@@ -14,7 +14,7 @@ router.put('/items/:id', ctrl.update);
 router.delete('/items/:id', ctrl.delete);
 
 
-//Router request for index.ejs using render instead of send otherwise will download the page
+//Router render request for index.ejs 
 router.get('/', (req, res) => {
     Item.find({}, function(err, items) {
         res.render('index', {
@@ -22,6 +22,13 @@ router.get('/', (req, res) => {
         })
     })
 })
+
+//Router gets render.js
+router.get('/', service.indexRoutes);
+router.get('/add-item', services.add_item);
+
+//Router gets page
+router.get('/update-item', )
 
 
 //Router request create.html
