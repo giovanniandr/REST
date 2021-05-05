@@ -16,7 +16,6 @@ axios = require('axios');
 
 //Variable for app to be used for express and port given.
 var app = express();
-var Item = require('./models/item');
 var port = process.env.PORT || 8000;
 dotenv.config();
 
@@ -45,11 +44,13 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
         .catch((err) => console.log(err));
 
 
+const Item = require('./models/item');
+
 // //Get table content from database
-// app.get('/', (req, res) => {
-//     Item.find({}, function(err, items) {
-//         res.render('index', {
-//             addList: items
-//         })
-//     })
-// })
+app.get('/', (req, res) => {
+    Item.find({}, function(err, items) {
+        res.render('index', {
+            addList: items
+        })
+    })
+})

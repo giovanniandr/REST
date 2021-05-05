@@ -7,5 +7,5 @@ const itemsSchema = {
     category: String,
     allergy: String
 }
-
 const Item = mongoose.model('Item', itemsSchema);
+module.exports = Item;
