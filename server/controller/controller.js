@@ -19,7 +19,7 @@ exports.create = function(req, res) {
 };
 
 //Create function to get items
-exports.findFresh = function(req, res) {
+exports.find = function(req, res) {
 //Variable to find fresh items
 Item.find({}, function (err, items) {
     if (err) {
@@ -28,18 +28,6 @@ Item.find({}, function (err, items) {
     res.json(items);
   }); 
 };
-
-//Create function to get items
-exports.findDairy = function(req, res) {
-    //Variable to find fresh items
-    Item.find({category: 'Dairy'}, function (err, items) {
-        if (err) {
-          res.status(400).json(err); 
-        } 
-        res.json(items);
-      }); 
-    };
-    
 
 
 //Create function to update a single item

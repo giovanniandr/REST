@@ -54,7 +54,7 @@ $("#update_item").submit(function(event){
 
 
 var request = {
-    "url" : `https://8000-gray-slug-gpuvv993.ws-eu04.gitpod.io/items/${data.id}`,
+    "url" : `https://localhost:8000/items/${data.id}`,
     "method" : "PUT",
     "data" : data
 }
@@ -71,7 +71,7 @@ $ondelete.click(function(){
     var id = $(this).attr("data-id")
 
     var request = {
-        "url" : `https://8000-gray-slug-gpuvv993.ws-eu04.gitpod.io/items/${id}`,
+        "url" : `https://localhost:8000/items/${id}`,
         "method" : "DELETE"
     }
 
