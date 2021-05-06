@@ -3,13 +3,23 @@
     <td><%= items[i].name %></td>
     <td><%= items[i].category %></td>
     <td><%= items[i].allergy %></td>
-    <td>
-        <a href="" class="btn border-shadow update">
-            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+    <td>  
+        <!-- Button to update item -->
+         <a href="/update-item?id=<%= items[i]._id%>">
+                 <!-- Return button -->
+                 <div class="form-group" >
+                     <button id="update-color" type="submit" class="btn text-dark"> Update </button>
+                 </div>
         </a>
-        <a class="btn border-shadow delete">
-            <span class="text-gradient"><i class="fas fa-times"></i></span>
-        </a>
-    </td>
+     </td>
+     <td>  
+     <!-- Button to delete item -->
+         <a href="/" class="action-item" id="delete-color">
+                 <!-- Return button -->
+                 <div class="form-group" >
+                     <button type="submit" class="btn text-dark"> Delete </button>
+                 </div>
+         </form>
+     </td>
 </tr>
 <% } %>

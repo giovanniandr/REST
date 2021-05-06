@@ -21,14 +21,17 @@ dotenv.config();
 
 //Express variable uses body parser to get information, logger, routing and set as public for pages to be open.
 app
-    .use(bodyParser.urlencoded({ extended: false}))
-    .use(bodyParser.json())
+    .use(bodyParser.urlencoded({ extended: true}))
     .use(logger('tiny'))
     .use('/', require('./routes'))
     .use(express.static('public'));
 
 //Set the view engine to open index.ejs
 app.set('view engine', 'ejs');
+
+//Load css folder
+app.use('/css', express.static(path.resolve(__dirname, "/css")))
+
 
 //Display on command which port is listening too
 app.listen(port, function(err){

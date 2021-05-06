@@ -7,7 +7,7 @@ services = require('./server/services/render'),
 ctrl = require('./server/controller/controller');
 
 //Router gets render.js
-router.get('/', services.indexRoutes);
+router.get('/', services.index);
 router.get('/add-item', services.add_item);
 router.get('/update-item', services.update_item);
 
@@ -19,16 +19,6 @@ router.delete('/items/:id', ctrl.delete);
 
 //Router request create.html
  router.use('/views', express.static(__dirname + '/views'));
-
-
-//Router request css files
-router.get('/style.css', function(req,res){
-    res.sendFile(path.join(__dirname, 'style.css'))
-});
-
-router.get('/crud.css', function(req,res){
-    res.sendFile(path.join(__dirname, 'crud.css'))
-});
 
 //Router request script.js
 router.get('/script.js', function(req,res){
