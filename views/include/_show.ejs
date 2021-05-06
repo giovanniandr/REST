@@ -6,7 +6,7 @@
     <td>  
         <!-- Button to update item -->
         <a href="/update-item?id=<%= items[i]._id%>">
-            <!-- Return button -->
+            <!-- Update button -->
             <div class="form-group" >
                 <button id="update-color" type="submit" class="btn text-dark"> Update </button>
             </div>
@@ -14,10 +14,10 @@
      </td>
      <td>  
      <!-- Button to delete item -->
-         <a href="/" class="action-item" id="delete-color">
-                 <!-- Return button -->
+         <a class="action-item" id="delete-color">
+                 <!-- Delete button -->
                  <div class="form-group" >
-                     <button type="submit" class="btn text-dark"> Delete </button>
+                     <button type="submit" data-id=<%= items[i]._id%>  class="btn text-dark"> Delete </button>
                  </div>
         </a>
      </td>

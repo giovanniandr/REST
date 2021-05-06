@@ -66,7 +66,7 @@ $.ajax(request).done(function(response){
 })
 
 if(window.location.pathname == "/"){
-$ondelete = $(".table tbody td a.delete");
+$ondelete = $(".table tbody td button.delete");
 $ondelete.click(function(){
     var id = $(this).attr("data-id")
 

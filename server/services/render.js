@@ -8,9 +8,7 @@ exports.index = function(req, res){
         })
         .catch(err =>{
             res.send(err);
-        })
-    
-        
+        })      
 }
 
 //Render add page
