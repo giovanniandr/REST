@@ -107,13 +107,13 @@ a, label {
     margin: auto;
 }
 
-#update_user .form-group,
+#update_item .form-group,
 #create-item .form-group,
 #rbutton .form-group{
     margin: .4em 0;
 }
 
-#update_user .form-group input[type="text"],
+#update_item .form-group input[type="text"],
 #create-item .form-group input[type="text"],
 #rbutton .form-group input[type="text"]{
     width: 100%;
@@ -135,7 +135,7 @@ select{
     border-radius: .2em;
 }
 
-#update_user .form-group .btn,
+#update_item .form-group .btn,
 #create-item .form-group .btn,
 #rbutton .form-group .btn{
     width: 100%;
@@ -149,7 +149,7 @@ select{
     margin: .5em 0;
 }
 
-#update_user .form-group .btn:hover,
+#update_item .form-group .btn:hover,
 #create-item .form-group .btn:hover,
 #rbutton .form-group .btn:hover{
     background-color: #ecfcf2;

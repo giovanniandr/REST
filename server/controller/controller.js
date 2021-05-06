@@ -19,56 +19,26 @@ exports.create = function(req, res) {
 };
 
 //Create function to get items
-exports.find = function(req, res) {
-//Variable to find items
-
-  if(req.query.id){
-  const id = req.query.id;
-
-  Item.findById(id)
-      .then(data =>{
-          if(!data){
-              res.status(404).send({ message : "Not found an item with id "+ id})
-          }else{
-              res.send(data)
-          }
-      })
-      .catch(err =>{
-          res.status(500).send({ message: "Erro retrieving an item with id " + id})
-      })
-    }else{
-      Item.find()
-          .then(user => {
-              res.send(user)
-          })
-          .catch(err => {
-              res.status(500).send({ message : err.message || "Error Occurred while retriving item information" })
-          })
-  }
-    };
+exports.findFresh = function(req, res) {
+//Variable to find fresh items
+Item.find({category: 'Fresh'}, function (err, users) {
+    if (err) {
+      res.status(400).json(err); 
+    } 
+    res.json(users);
+  }); 
+};
 
 
 //Create function to update a single item
 exports.update = function(req, res) {
 //Variable to find and update the one item 
-  if(!req.body){
-    return res
-        .status(400)
-        .send({ message : "Data to update can not be empty"})
-  }
-
-  const id = req.params.id;
-  Item.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
-    .then(data => {
-        if(!data){
-            res.status(404).send({ message : `Cannot Update item with ${id}. Maybe item not found!`})
-        }else{
-            res.send(data)
-        }
-    })
-    .catch(err =>{
-        res.status(500).send({ message : "Error Update item information"})
-    })
+Item.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, function (err, items) {
+    if (err) {
+      res.status(400).json(err); 
+    } 
+    res.json(items);
+  }); 
 };
 
 //Create function to delete a single item

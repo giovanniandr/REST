@@ -23,17 +23,19 @@
         <main id="site-main"> 
             <div class="wrap-container"> 
                 <!-- Table for create -->
-                <form method="POST" id="create-item">
+                <form method="POST" id="update_item">
                     <div class="new_item">
                         
                          <!-- Form for Category -->
                         <div class="form-group">
                             <label class="text-light"> Name </label>
+                            <input type="hidden" name="id" value="<%= items._id %>">
                             <input type="text" name="name" value="<%= items.name %>">
 
                             <label class="text-light"> Category </label>
-                            <select name = "category" value="" type="text" >
+                            <select name = "category" type="text" >
                                 <option> <%= items.category %> </option>
+                                <option> None </option>
                                 <option> Fresh </option>
                                 <option> Dairy </option>
                                 <option> Canned </option>
@@ -41,8 +43,8 @@
                             </select>
 
                             <label class="text-light"> Allergy </label>
-                            <select name = "allergy" value="<%= items.allergy %>" type="text" >
-                                <option>  </option>
+                            <select name = "allergy" type="text" >
+                                <option> <%= items.allergy %> </option>
                                 <option> None </option>
                                 <option> Milk </option>
                                 <option> Eggs </option>
@@ -59,14 +61,14 @@
                 </form>
 
                 <!-- Return to main menu -->
-                <form action="/" method="GET" id="rbutton">
+                <a href="/" id="rbutton">
                     <div class="new_item">
                         <!-- Return button -->
                         <div class="form-group" >
                             <button type="submit" class="btn text-dark"> Return to main menu </button>
                         </div>
                     </div>
-                </form>
+                </a>
 
 
             <!-- Wrap container closes-->

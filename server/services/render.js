@@ -21,8 +21,8 @@ exports.add_item = function(req, res){
 //Render update page
 exports.update_item = (req, res) =>{
     axios.get('http://localhost:8000/items', { params : { id : req.query.id }})
-        .then(function(itemdata){
-            res.render("update_item", { items : itemdata.data})
+        .then(function(userdata){
+            res.render("update_item", { items : userdata.data})
         })
         .catch(err =>{
             res.send(err);

@@ -29,9 +29,6 @@ app
 //Set the view engine to open index.ejs
 app.set('view engine', 'ejs');
 
-//Load css folder
-app.use('/css', express.static(path.resolve(__dirname, "/css")))
-
 
 //Display on command which port is listening too
 app.listen(port, function(err){

@@ -13,14 +13,17 @@ router.get('/update-item', services.update_item);
 
 //CRUD API
 router.post('/items', ctrl.create);
-router.get('/items', ctrl.find);
-router.put('/items/:id', ctrl.update);
+router.get('/items', ctrl.findFresh);
+// router.get('/items', ctrl.findDairy);
+// router.get('/items', ctrl.findCanned);
+// router.get('/items', ctrl.findBakery);
+// router.put('/items/:id', ctrl.update);
 router.delete('/items/:id', ctrl.delete);
 
 //Router request create.html
  router.use('/views', express.static(__dirname + '/views'));
 
-//Router request script.js
+ //Router request script.js
 router.get('/script.js', function(req,res){
     res.sendFile(path.join(__dirname, 'script.js'))
 });
