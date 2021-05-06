@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../views/css/style.css"> 
+  <title> Ingredient System </title>
+</head>
+<body>
+ 
+    <!-- Menu area-->
+    <header id="header">
+        <nav>
+            <!-- Welcome page -->
+            <div class="container">
+                <div class="text-center">
+                    <a class="nav-brand text-dark"> Stock System Orders & Management </a>
+                </div>
+            </div>
+        </nav>
+    </header>  
+
+    <!-- Page tabs for selecting between categories -->
+    <ul class="tabs">
+        <li class="active" rel="tab1"> <a href="#tab1" class="text-center-tab"> Fresh Products </a> </li>
+        <li rel="tab2"> <a href="#tab2" class="text-center-tab"> Dairy Products </a> </li>
+        <li rel="tab3"> <a href="#tab3" class="text-center-tab"> Canned Products </a> </li>
+        <li rel="tab4"> <a href="#tab4" class="text-center-tab"> Bakery Products </a> </li>
+    </ul>
+
+<!-- Tab_container opens -->
+<div class="tab_container">
+
+    <!-- First page: Fresh Products -->
+    <h3 class="d_active tab_drawer_heading" rel="tab1"> </h3>
+    <div id="tab1" class="tab_content">
+
+    <!-- Page tabes orientation -->
+    <div class="section"> 
+
+        <!-- Text title of the page -->
+        <div id="section"> <a class="text-title"> List of fresh products. </a> </div>
+
+        <!-- Create new button -->
+        <form action="/add-item" class="action-item">
+                <!-- Create button -->
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark" >  Create new ingredient </button>
+                </div>
+        </form>
+        <!-- Close new button -->
+
+    </div>
+
+    <!-- Table with CRUD Starts -->
+        <main id="site-main"> 
+            <div class="container>"> 
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th> Name </th>
+                                <th> Category </th>
+                                <th> Allergy </th>
+                                <th> Update </th>
+                                <th> Delete </th>
+                            </tr>
+                        </thead>
+                        <!-- Row and data -->
+                        <tbody>
+                            <%- include('include/_show') %>
+                        </tbody>
+                    </table>
+            </div>
+        </main>
+  </div>
+<!-- Tab_content closes-->
+
+
+    <!-- Second page: Dairy Products -->
+    <h3 class="d_active tab_drawer_heading" rel="tab2"> </h3>
+    <div id="tab2" class="tab_content">
+
+    <!-- Page tabes orientation -->
+    <div class="section"> 
+
+        <!-- Text title of the page -->
+        <div id="section"> <a class="text-title"> List of dairy products. </a> </div>
+
+        <!-- Create new button -->
+        <form action="/add-item" class="action-item">
+                <!-- Create button -->
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark" >  Create new ingredient </button>
+                </div>
+        </form>
+        <!-- Close new button -->
+
+    </div>
+
+    <!-- Table with CRUD Starts -->
+        <main id="site-main"> 
+            <div class="container>"> 
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th> Name </th>
+                                <th> Category </th>
+                                <th> Allergy </th>
+                                <th> Update </th>
+                                <th> Delete </th>
+                            </tr>
+                        </thead>
+                        <!-- Row and data -->
+                        <tbody>
+                            <%- include('include/_show') %>
+                        </tbody>
+                    </table>
+            </div>
+        </main>
+  </div>
+<!-- Tab_content closes-->
+
+    <!-- Third page: Canned Products -->
+    <h3 class="d_active tab_drawer_heading" rel="tab3"> </h3>
+    <div id="tab3" class="tab_content">
+
+    <!-- Page tabes orientation -->
+    <div class="section"> 
+
+        <!-- Text title of the page -->
+        <div id="section"> <a class="text-title"> List of canned products. </a> </div>
+
+        <!-- Create new button -->
+        <form action="/add-item" class="action-item">
+                <!-- Create button -->
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark" >  Create new ingredient </button>
+                </div>
+        </form>
+        <!-- Close new button -->
+
+    </div>
+
+    <!-- Table with CRUD Starts -->
+        <main id="site-main"> 
+            <div class="container>"> 
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th> Name </th>
+                                <th> Category </th>
+                                <th> Allergy </th>
+                                <th> Update </th>
+                                <th> Delete </th>
+                            </tr>
+                        </thead>
+                        <!-- Row and data -->
+                        <tbody>
+                            <%- include('include/_show') %>
+                        </tbody>
+                    </table>
+            </div>
+        </main>
+  </div>
+<!-- Tab_content closes-->
+
+    <!-- Fourth page: Fresh Products -->
+    <h3 class="d_active tab_drawer_heading" rel="tab4"> </h3>
+    <div id="tab4" class="tab_content">
+
+    <!-- Page tabes orientation -->
+    <div class="section"> 
+
+        <!-- Text title of the page -->
+        <div id="section"> <a class="text-title"> List of bakery products. </a> </div>
+
+        <!-- Create new button -->
+        <form action="/add-item" class="action-item">
+                <!-- Create button -->
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark" >  Create new ingredient </button>
+                </div>
+        </form>
+        <!-- Close new button -->
+
+    </div>
+
+    <!-- Table with CRUD Starts -->
+        <main id="site-main"> 
+            <div class="container>"> 
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th> Name </th>
+                                <th> Category </th>
+                                <th> Allergy </th>
+                                <th> Update </th>
+                                <th> Delete </th>
+                            </tr>
+                        </thead>
+                        <!-- Row and data -->
+                        <tbody>
+                            <%- include('include/_show') %>
+                        </tbody>
+                    </table>
+            </div>
+        </main>
+  </div>
+<!-- Tab_content closes-->
+
+
+<!-- Tab_container closes -->
+</div>
+
+<!-- Script in the end to work jquery, got problems with script not working on top -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+
+</body>
+</html>

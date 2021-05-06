@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../views/css/crud.css"> 
+  <title> Item management </title>
+</head>
+<body>
+ 
+    <!-- Menu area-->
+    <header id="header">
+            <nav>
+            <!-- Welcome page -->
+            <div class="container">
+                <div class="text-center">
+                    <a class="nav-brand text-dark"> New ingredient item </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Table with CRUD Starts -->
+        <main id="site-main"> 
+            <div class="wrap-container"> 
+                <!-- Table for create -->
+                <form action="/items" method="POST" id="create-item">
+                    <div class="new_item">
+                        
+
+                         <!-- Form for Category -->
+                        <div class="form-group">
+                            <label class="text-light"> Name </label>
+                            <input name="name" type="text">
+
+                            <label class="text-light"> Category </label>
+                            <select name = "category" type="text"> 
+                                <option> Fresh </option>
+                                <option> Dairy </option>
+                                <option> Canned </option>
+                                <option> Bakery </option>
+                            </select>
+
+                            <label class="text-light"> Allergy </label>
+                            <select name = "allergy" type="text"> 
+                                <option> None </option>
+                                <option> Milk </option>
+                                <option> Eggs </option>
+                                <option> Peanuts </option>
+                                <option> Tree nuts </option>
+                                <option> Fish </option>
+                                <option> Vegetables </option>
+                                <option> Fruits </option>
+                            </select>
+
+                            <button type="submit" class="btn text-dark"> Create </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Return to main menu -->
+                <form action="/" method="GET" id="rbutton">
+                    <div class="new_item">
+                        <!-- Return button -->
+                        <div class="form-group" >
+                            <button type="submit" class="btn text-dark"> Return to main menu </button>
+                        </div>
+                    </div>
+                </form>
+
+
+            <!-- Wrap container closes-->
+            </div>
+
+        <!-- Main section closes -->
+        </main>
+<!-- Notification for the user that ingridient is created -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>       
+<script src="../script.js"> </script>
+
+</body>
+</html>
