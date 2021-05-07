@@ -54,7 +54,7 @@ $("#update_item").submit(function(event){
 
 
 var request = {
-    "url" : `https://8000-amber-mouse-mi9cewty.ws-eu03.gitpod.io/items/${data.id}`,
+    "url" : `https://mysterious-reef-94316.herokuapp.com/items/${data.id}`,
     "method" : "PUT",
     "data" : data
 }
@@ -66,12 +66,12 @@ $.ajax(request).done(function(response){
 })
 
 if(window.location.pathname == "/"){
-$ondelete = $(".table tbody td button.delete");
+$ondelete = $(".table tbody td a.delete");
 $ondelete.click(function(){
     var id = $(this).attr("data-id")
 
     var request = {
-        "url" : `https://8000-amber-mouse-mi9cewty.ws-eu03.gitpod.io/items/${id}`,
+        "url" : `https://mysterious-reef-94316.herokuapp.com/items/${id}`,
         "method" : "DELETE"
     }
 

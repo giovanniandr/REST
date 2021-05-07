@@ -53,22 +53,24 @@
 
     <!-- Table with CRUD Starts -->
         <main id="site-main"> 
-            <div class="container>"> 
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th> Name </th>
-                                <th> Category </th>
-                                <th> Allergy </th>
-                                <th> Update </th>
-                                <th> Delete </th>
-                            </tr>
-                        </thead>
-                        <!-- Row and data -->
-                        <tbody>
-                            <%- include('include/_show') %>
-                        </tbody>
-                    </table>
+            <div class="container">
+                <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nae</th>
+                            <th>Category</th>
+                            <th>Allergy</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_show') %>
+                    </tbody>
+                </table>
+            </form>
             </div>
         </main>
   </div>

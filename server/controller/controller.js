@@ -19,7 +19,7 @@ exports.create = function(req, res) {
 };
 
 //Create function to get items
-exports.findFresh = function(req, res) {
+exports.find = function(req, res) {
 //Variable to find fresh items
 Item.find({}, function (err, items) {
     if (err) {
@@ -29,23 +29,11 @@ Item.find({}, function (err, items) {
   }); 
 };
 
-//Create function to get items
-exports.findDairy = function(req, res) {
-    //Variable to find fresh items
-    Item.find({category: 'Dairy'}, function (err, items) {
-        if (err) {
-          res.status(400).json(err); 
-        } 
-        res.json(items);
-      }); 
-    };
-    
-
 
 //Create function to update a single item
 exports.update = function(req, res) {
 //Variable to find and update the one item 
-Item.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, function (err, items) {
+Item.findByIdAndUpdate({id: req.params.id}, req.body, {new: true}, function (err, items) {
     if (err) {
       res.status(400).json(err); 
     } 
@@ -56,7 +44,7 @@ Item.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, function (er
 //Create function to delete a single item
 exports.delete = function(req, res) {
 //Variable to find and delete the one item
-  Item.findByIdAndRemove({_id: req.params.id}, function (err, items) {
+  Item.findByIdAndRemove({id: req.params.id}, function (err, items) {
     if (err) {
       res.status(400).json(err); 
     } 
